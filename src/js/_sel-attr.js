@@ -3,7 +3,7 @@
  * Selector Attributes
  *
  * @author Takuto Yanagida
- * @version 2021-10-26
+ * @version 2021-11-11
  *
  */
 
@@ -20,7 +20,7 @@ function _addHasOnlyChild(e, styleHasOnlyChild) {
 			return;
 		}
 	}
-	enableClass(true, e.parentElement, styleHasOnlyChild);
+	setClass(e.parentElement, styleHasOnlyChild);
 }
 
 function addNextTo(es, stylePrefixNextTo) {
@@ -29,7 +29,7 @@ function addNextTo(es, stylePrefixNextTo) {
 		if (prev && prev.className === '') {
 			const tn = prev.tagName.toLowerCase();
 			const cc = tn.charAt(0).toUpperCase() + tn.slice(1);
-			enableClass(true, e, stylePrefixNextTo + cc);
+			setClass(e, stylePrefixNextTo + cc);
 		}
 	}
 }

@@ -3,7 +3,7 @@
  * Align Style (JS)
  *
  * @author Takuto Yanagida
- * @version 2021-10-26
+ * @version 2021-11-11
  *
  */
 
@@ -16,6 +16,7 @@ window['NACSS'] = window['NACSS'] || {};
 	// @include _alignment.js
 	NS.alignment = initialize;
 
+	// @include _style-class.js
 	// @include _sel-attr.js
 	// @include _image-link.js
 	// @include _utilities.js
