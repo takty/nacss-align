@@ -3,14 +3,51 @@
  * Alignment Style
  *
  * @author Takuto Yanagida
- * @version 2021-10-27
+ * @version 2021-11-16
  *
  */
 
 
-@use 'inner';
-@use 'wide';
+@use 'float';
+@use 'overflow';
 
 
-@include inner.alignment-main;
-@include wide.alignment-wide;
+.alignleft,
+.alignright,
+.aligncenter {
+	@include float.all;
+}
+
+.alignleft,
+.alignright {
+	@include float.side;
+}
+
+.alignleft {
+	@include float.left;
+}
+
+.alignright {
+	@include float.right;
+}
+
+.aligncenter {
+	@include float.center;
+}
+
+
+// -----------------------------------------------------------------------------
+
+
+.alignfull,
+.alignwide {
+	@include overflow.all;
+}
+
+.alignfull {
+	@include overflow.full;
+}
+
+.alignwide {
+	@include overflow.wide;
+}

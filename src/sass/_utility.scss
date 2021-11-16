@@ -1,0 +1,13 @@
+/**
+ *
+ * Utility Style
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-14
+ *
+ */
+
+
+@function bp($min, $max, $bp) {
+	@return clamp(#{$min}, calc((100% - #{$bp}) * 9999), #{$max});
+}

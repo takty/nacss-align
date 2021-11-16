@@ -1,0 +1,47 @@
+/**
+ *
+ * Float
+ *
+ * @author Takuto Yanagida
+ * @version 2021-11-16
+ *
+ */
+
+
+@use 'utility';
+
+
+@mixin all {  // left, right, center
+	--float-block-margin: 1rem;
+}
+
+@mixin side {  // left, right
+	--float-inline-margin-min: 1rem;
+	--float-inline-margin-max: 2rem;
+	--float-inline-margin-bp : 36rem;
+
+	--float-inline-margin: #{utility.bp(var(--float-inline-margin-min), var(--float-inline-margin-max), var(--float-inline-margin-bp))};
+	--float-offset       : 0.25rem;
+
+	margin-block: 0 var(--float-block-margin);
+	transform   : translateY(var(--float-offset));
+}
+
+@mixin left {
+	float        : left;
+	margin-inline: auto var(--float-inline-margin);
+}
+
+@mixin right {
+	float        : right;
+	margin-inline: var(--float-inline-margin) auto;
+}
+
+@mixin center {
+	display: grid;
+	width  : fit-content;
+
+	clear        : both;
+	margin-block : var(--float-block-margin);
+	margin-inline: auto;
+}
