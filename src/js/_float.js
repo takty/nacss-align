@@ -9,8 +9,8 @@
 
 
 function initialize(tars = {}, opts = {}) {
-	tars = Object.assign({ left: [], right: [], center: [] }, tars);
-	if (tars['left'].length + tars['right'].length + tars['center'].length === 0 ) return;
+	tars = Object.assign({ left: [], right: [] }, tars);
+	if (tars['left'].length + tars['right'].length === 0 ) return;
 
 	opts = Object.assign({
 		styleAlign : ':ncAlign',
