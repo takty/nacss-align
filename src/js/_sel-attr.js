@@ -3,24 +3,41 @@
  * Selector Attributes
  *
  * @author Takuto Yanagida
- * @version 2021-11-11
+ * @version 2021-11-17
  *
  */
 
 
-function addHasOnlyChild(es, styleHasOnlyChild) {
-	for (const e of es) _addHasOnlyChild(e, styleHasOnlyChild);
+function initialize(ts, opts = {}) {
+	if (ts.length === 0) return;
+
+	opts = Object.assign({
+		styleHasOnlyChild: ':ncHasOnlyChild',
+		stylePrefixNextTo: ':ncNextTo',
+	}, opts);
+
+	addHasOnlyChild(ts, opts['styleHasOnlyChild']);
+	addNextTo(ts, opts['stylePrefixNextTo']);
 }
 
-function _addHasOnlyChild(e, styleHasOnlyChild) {
-	for (const c of Array.from(e.parentElement.childNodes)) {
-		if (c.nodeType === 3 /*TEXT_NODE*/ && c.textContent.trim() !== '') {
-			return;
-		} else if (c.nodeType === 1 /*ELEMENT_NODE*/ && c !== e) {
-			return;
+function addHasOnlyChild(es, styleHasOnlyChild) {
+	for (const e of es) {
+		if (hasOnlyChildOne(e)) {
+			setClass(e.parentElement, styleHasOnlyChild);
 		}
 	}
-	setClass(e.parentElement, styleHasOnlyChild);
+}
+
+function hasOnlyChildOne(e) {
+	for (const c of Array.from(e.parentElement.childNodes)) {
+		if (
+			(c.nodeType === 1 /*ELEMENT_NODE*/ && c !== e) ||
+			(c.nodeType === 3 /*TEXT_NODE*/ && c.textContent.trim() !== '')
+		) {
+			return false;
+		}
+	}
+	return true;
 }
 
 function addNextTo(es, stylePrefixNextTo) {
