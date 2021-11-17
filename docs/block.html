@@ -1,24 +1,25 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta charset="utf-8">
-<title>nacss-alignment</title>
+<title>Block Float - nacss-alignment</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/alignment.min.css?v111710t">
-<link rel="stylesheet" href="css/style.min.css?v111710t">
-<script src="js/alignment.min.js?v111710t"></script>
+<link rel="stylesheet" href="css/alignment.min.css?v112213t">
+<link rel="stylesheet" href="css/style.min.css?v112213t">
+<script src="js/alignment.min.js?v112213t"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
-		// const tst = document.querySelectorAll('.tab-stack');
-		NACSS.alignment();
+		const left   = Array.from(document.getElementsByClassName('alignleft'));
+		const right  = Array.from(document.getElementsByClassName('alignright'));
+		NACSS.alignmentFloat({ left, right }, {});
 	});
 </script>
 </head>
 
 <body>
-	<header role="banner">
-		<h1>Alignment</h1>
+	<header>
+		<h1>Block Float</h1>
+		<nav><a href="index.html">Go back</a></nav>
 	</header>
 
 	<main>
@@ -28,7 +29,6 @@
 			<a href="https://via.placeholder.com/1600x400.png">
 				<img width="320" height="80" src="https://via.placeholder.com/320x80.png" alt="">
 			</a>
-			<figcaption>This is very long long figure caption. This is very long long figure caption.</figcaption>
 		</figure>
 
 		<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
@@ -42,7 +42,6 @@
 			<a href="https://via.placeholder.com/1600x400.png">
 				<img width="320" height="80" src="https://via.placeholder.com/320x80.png" alt="">
 			</a>
-			<figcaption>Figure caption</figcaption>
 		</figure>
 
 		<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
@@ -56,7 +55,6 @@
 			<a href="https://via.placeholder.com/1600x400.png">
 				<img width="320" height="80" src="https://via.placeholder.com/320x80.png" alt="">
 			</a>
-			<figcaption>Figure caption</figcaption>
 		</figure>
 
 		<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
@@ -67,7 +65,6 @@
 			<a href="https://via.placeholder.com/1600x400.png">
 				<img width="320" height="80" src="https://via.placeholder.com/320x80.png" alt="">
 			</a>
-			<figcaption>Figure caption</figcaption>
 		</figure>
 
 		<p>One morning, when Gregor Samsa woke from troubled dreams, he found himself transformed in his bed into a horrible
