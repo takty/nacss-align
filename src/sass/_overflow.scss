@@ -10,10 +10,10 @@
 
 @mixin custom-property {
 	// full, wide
-	--nc-overflow-block-margin: 1rem;
+	--nc-align-overflow-block-margin: 1rem;
 
 	// wide
-	--nc-overflow-wide-width: 72rem;
+	--nc-align-overflow-wide-width: 72rem;
 }
 
 @mixin all {  // full, wide
@@ -21,7 +21,7 @@
 	width  : 100vw;
 
 	clear        : both;
-	margin-block : var(--nc-overflow-block-margin);
+	margin-block : var(--nc-align-overflow-block-margin);
 }
 
 @mixin full {
@@ -30,6 +30,6 @@
 }
 
 @mixin wide {
-	margin-inline: calc((min(100vw, var(--nc-overflow-wide-width)) - 100%) / -2);
-	max-width    : var(--nc-overflow-wide-width);
+	margin-inline: calc((min(100vw, var(--nc-align-overflow-wide-width)) - 100%) / -2);
+	max-width    : var(--nc-align-overflow-wide-width);
 }

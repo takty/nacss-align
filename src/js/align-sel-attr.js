@@ -15,7 +15,7 @@ window['NACSS'] = window['NACSS'] || {};
 
 	(function () {
 		// @include _sel-attr.js
-		NS.alignmentSelectorAttribute = initialize;
+		NS.alignSelectorAttribute = initialize;
 	})();
 
 	// @include _style-class.js

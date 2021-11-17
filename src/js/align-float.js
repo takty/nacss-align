@@ -1,6 +1,6 @@
 /**
  *
- * Alignment
+ * Alignment - Float
  *
  * @author Takuto Yanagida
  * @version 2021-11-17
@@ -15,12 +15,7 @@ window['NACSS'] = window['NACSS'] || {};
 
 	(function () {
 		// @include _float.js
-		NS.alignmentFloat = initialize;
-	})();
-
-	(function () {
-		// @include _sel-attr.js
-		NS.alignmentSelectorAttribute = initialize;
+		NS.alignFloat = initialize;
 	})();
 
 	// @include _style-class.js
