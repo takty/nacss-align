@@ -3,7 +3,7 @@
  * Alignment Style
  *
  * @author Takuto Yanagida
- * @version 2021-11-16
+ * @version 2021-11-17
  *
  */
 
@@ -12,11 +12,14 @@
 @use 'overflow';
 
 
-.alignleft,
-.alignright,
-.aligncenter {
-	@include float.all;
+:root {
+	@include float.custom-property;
+	@include overflow.custom-property;
 }
+
+
+// -----------------------------------------------------------------------------
+
 
 .alignleft,
 .alignright {

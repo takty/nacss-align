@@ -3,19 +3,25 @@
  * Overflow
  *
  * @author Takuto Yanagida
- * @version 2021-11-16
+ * @version 2021-11-17
  *
  */
 
 
-@mixin all {  // full, wide
-	--overflow-block-margin: 1rem;
+@mixin custom-property {
+	// full, wide
+	--nc-overflow-block-margin: 1rem;
 
+	// wide
+	--nc-overflow-wide-width: 72rem;
+}
+
+@mixin all {  // full, wide
 	display: grid;
 	width  : 100vw;
 
 	clear        : both;
-	margin-block : var(--overflow-block-margin);
+	margin-block : var(--nc-overflow-block-margin);
 }
 
 @mixin full {
@@ -24,8 +30,6 @@
 }
 
 @mixin wide {
-	--overflow-wide-width: 72rem;
-
-	margin-inline: calc((min(100vw, var(--overflow-wide-width)) - 100%) / -2);
-	max-width    : var(--overflow-wide-width);
+	margin-inline: calc((min(100vw, var(--nc-overflow-wide-width)) - 100%) / -2);
+	max-width    : var(--nc-overflow-wide-width);
 }

@@ -3,7 +3,7 @@
  * Float
  *
  * @author Takuto Yanagida
- * @version 2021-11-16
+ * @version 2021-11-17
  *
  */
 
@@ -11,30 +11,32 @@
 @use 'utility';
 
 
-@mixin all {  // left, right, center
-	--float-block-margin: 1rem;
+@mixin custom-property {
+	// left, right, center
+	--nc-float-block-margin: 1rem;
+
+	// left, right
+	--nc-float-inline-margin-min: 1rem;
+	--nc-float-inline-margin-max: 2rem;
+	--nc-float-inline-margin-bp : 36rem;
+
+	--nc-float-inline-margin: #{utility.bp(var(--nc-float-inline-margin-min), var(--nc-float-inline-margin-max), var(--nc-float-inline-margin-bp))};
+	--nc-float-offset       : 0.25rem;
 }
 
 @mixin side {  // left, right
-	--float-inline-margin-min: 1rem;
-	--float-inline-margin-max: 2rem;
-	--float-inline-margin-bp : 36rem;
-
-	--float-inline-margin: #{utility.bp(var(--float-inline-margin-min), var(--float-inline-margin-max), var(--float-inline-margin-bp))};
-	--float-offset       : 0.25rem;
-
-	margin-block: 0 var(--float-block-margin);
-	transform   : translateY(var(--float-offset));
+	margin-block: 0 var(--nc-float-block-margin);
+	transform   : translateY(var(--nc-float-offset));
 }
 
 @mixin left {
 	float        : left;
-	margin-inline: auto var(--float-inline-margin);
+	margin-inline: auto var(--nc-float-inline-margin);
 }
 
 @mixin right {
 	float        : right;
-	margin-inline: var(--float-inline-margin) auto;
+	margin-inline: var(--nc-float-inline-margin) auto;
 }
 
 @mixin center {
@@ -42,6 +44,6 @@
 	width  : fit-content;
 
 	clear        : both;
-	margin-block : var(--float-block-margin);
+	margin-block : var(--nc-float-block-margin);
 	margin-inline: auto;
 }
