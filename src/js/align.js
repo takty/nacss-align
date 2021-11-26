@@ -1,6 +1,6 @@
 /**
  *
- * Alignment
+ * Align
  *
  * @author Takuto Yanagida
  * @version 2021-11-17

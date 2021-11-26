@@ -1,6 +1,6 @@
 /**
  *
- * Alignment - Selector Attribute
+ * Align - Selector Attribute
  *
  * @author Takuto Yanagida
  * @version 2021-11-17

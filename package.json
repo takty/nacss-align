@@ -1,7 +1,7 @@
 {
-	"name": "nacss-alignment",
+	"name": "nacss-align",
 	"version": "1.0.0",
-	"description": "A Alignment Style Sheet",
+	"description": "A Align Style Sheet",
 	"author": "Takuto Yanagida",
 	"main": "gulpfile.js",
 	"scripts": {
@@ -11,13 +11,13 @@
 	},
 	"repository": {
 		"type": "git",
-		"url": "git+https://github.com/takty/nacss-alignment.git"
+		"url": "git+https://github.com/takty/nacss-align.git"
 	},
 	"license": "MIT",
 	"bugs": {
-		"url": "https://github.com/takty/nacss-alignment/issues"
+		"url": "https://github.com/takty/nacss-align/issues"
 	},
-	"homepage": "https://github.com/takty/nacss-alignment#readme",
+	"homepage": "https://github.com/takty/nacss-align#readme",
 	"browserslist": [
 		"> 1%",
 		"last 2 versions",
@@ -38,7 +38,7 @@
 		"gulp-rename": "^2.0.0",
 		"gulp-sass": "^5.0.0",
 		"gulp-terser": "^2.1.0",
-		"sass": "^1.43.4"
+		"sass": "^1.43.5"
 	},
 	"devDependencies": {
 		"gulp-ignore": "^3.0.0",

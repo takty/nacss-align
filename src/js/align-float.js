@@ -1,6 +1,6 @@
 /**
  *
- * Alignment - Float
+ * Align - Float
  *
  * @author Takuto Yanagida
  * @version 2021-11-17
