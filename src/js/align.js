@@ -3,27 +3,29 @@
  * Align
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-12-07
  *
  */
 
+
+'use strict';
 
 window['NACSS'] = window['NACSS'] || {};
 
 
 (function (NS) {
 
-	(function () {
+	{
 		// @include _float.js
 		NS.alignFloat = initialize;
-	})();
+	}
 
-	(function () {
+	{
 		// @include _sel-attr.js
 		NS.alignSelectorAttribute = initialize;
-	})();
+	}
 
 	// @include _style-class.js
-	// @include _utilities.js
+	// @include _utility.js
 
 })(window['NACSS']);
