@@ -1,8 +1,25 @@
+/**
+ *
+ * Style for Document
+ *
+ * @author Takuto Yanagida
+ * @version 2021-12-26
+ *
+ */
+
+
+*,
+::before,
+::after {
+	box-sizing: border-box;
+}
+
 html {
 	scroll-behavior   : smooth;
 	scroll-padding-top: 8rem;
 
 	font-family: sans-serif;
+	line-height: 1.8;
 }
 
 header,
@@ -26,14 +43,9 @@ main {
 	margin-top: 2rem;
 }
 
-img {
-	max-width: 100%;
-	height: auto;
-}
 
-figure > a {
-	display: contents;
-}
+// -----------------------------------------------------------------------------
+
 
 main {
 	*:first-child:not(:where(.aligncenter, .alignwide, .alignfull)) {  // 0, 1, 0
@@ -47,4 +59,13 @@ main {
 	*:last-child:not(:where(.alignright, .alignleft, .aligncenter, .alignwide, .alignfull))  {  // 0, 1, 0
 		margin-block-end: 0;
 	}
+}
+
+img {
+	max-width: 100%;
+	height: auto;
+}
+
+figure > a {
+	display: contents;
 }
