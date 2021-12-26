@@ -3,15 +3,15 @@
  * Float
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-12-26
  *
  */
 
 
-@use 'utility';
+@use '__utility' as utility;
 
 
-@mixin custom-property {
+@mixin property-float {
 	// left, right, center
 	--nc-align-float-block-margin: 1rem;
 
@@ -24,7 +24,7 @@
 	--nc-align-float-offset       : 0.25rem;
 }
 
-@mixin side {  // left, right
+@mixin float {  // left, right
 	margin-block: 0 var(--nc-align-float-block-margin);
 	transform   : translateY(var(--nc-align-float-offset));
 }

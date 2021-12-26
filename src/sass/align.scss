@@ -3,18 +3,16 @@
  * Align
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-12-26
  *
  */
 
 
-@use 'float';
-@use 'overflow';
+@use '_align';
 
 
 :root {
-	@include float.custom-property;
-	@include overflow.custom-property;
+	@include align.property;
 }
 
 
@@ -23,19 +21,19 @@
 
 .alignleft,
 .alignright {
-	@include float.side;
+	@include align.float;
 }
 
 .alignleft {
-	@include float.left;
+	@include align.left;
 }
 
 .alignright {
-	@include float.right;
+	@include align.right;
 }
 
 .aligncenter {
-	@include float.center;
+	@include align.center;
 }
 
 
@@ -44,13 +42,13 @@
 
 .alignfull,
 .alignwide {
-	@include overflow.all;
+	@include align.overflow;
 }
 
 .alignfull {
-	@include overflow.full;
+	@include align.full;
 }
 
 .alignwide {
-	@include overflow.wide;
+	@include align.wide;
 }

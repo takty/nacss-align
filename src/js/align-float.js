@@ -3,24 +3,23 @@
  * Align - Float
  *
  * @author Takuto Yanagida
- * @version 2021-12-07
+ * @version 2021-12-26
  *
  */
 
 
 'use strict';
 
-window['NACSS'] = window['NACSS'] || {};
+window['NACSS']          = window['NACSS']          || {};
+window['NACSS']['align'] = window['NACSS']['align'] || {};
 
 
-(function (NS) {
+((NS) => {
 
-	{
-		// @include _float.js
-		NS.alignFloat = initialize;
-	}
+	// @include __style-class.js
+	// @include __utility.js
 
-	// @include _style-class.js
-	// @include _utility.js
+	// @include _float.js
+	NS.applyFloat = apply;
 
-})(window['NACSS']);
+})(window['NACSS']['align']);

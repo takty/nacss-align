@@ -3,12 +3,12 @@
  * Overflow
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-12-26
  *
  */
 
 
-@mixin custom-property {
+@mixin property-overflow {
 	// full, wide
 	--nc-align-overflow-block-margin: 1rem;
 
@@ -16,7 +16,7 @@
 	--nc-align-overflow-wide-width: 72rem;
 }
 
-@mixin all {  // full, wide
+@mixin overflow {  // full, wide
 	display: grid;
 	width  : 100vw;
 

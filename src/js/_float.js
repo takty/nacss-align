@@ -3,12 +3,12 @@
  * Float
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-12-26
  *
  */
 
 
-function initialize(tars = {}, opts = {}) {
+function apply(tars = {}, opts = {}) {
 	tars = Object.assign({ left: [], right: [] }, tars);
 	if (tars['left'].length + tars['right'].length === 0 ) return;
 

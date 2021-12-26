@@ -3,12 +3,12 @@
  * Selector Attributes
  *
  * @author Takuto Yanagida
- * @version 2021-11-17
+ * @version 2021-12-26
  *
  */
 
 
-function initialize(ts, opts = {}) {
+function apply(ts, opts = {}) {
 	if (ts.length === 0) return;
 
 	opts = Object.assign({
