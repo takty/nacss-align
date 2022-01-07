@@ -4,13 +4,13 @@
 <meta charset="utf-8">
 <title>Inline Float - nacss-align</title>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet" href="css/align.min.css?v141108t">
-<link rel="stylesheet" href="css/style.min.css?v141108t">
-<script src="js/align.min.js?v141108t"></script>
+<link rel="stylesheet" href="css/align.min.css?v114704t">
+<link rel="stylesheet" href="css/style.min.css?v114704t">
+<script src="js/align.min.js?v114704t"></script>
 <script>
 	document.addEventListener('DOMContentLoaded', () => {
-		const left   = Array.from(document.getElementsByClassName('alignleft'));
-		const right  = Array.from(document.getElementsByClassName('alignright'));
+		const left  = [...document.getElementsByClassName('alignleft')];
+		const right = [...document.getElementsByClassName('alignright')];
 		NACSS.align.applyFloat({ left, right }, {});
 	});
 </script>

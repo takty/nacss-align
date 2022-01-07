@@ -3,7 +3,7 @@
  * Selector Attributes
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2022-01-07
  *
  */
 
@@ -29,7 +29,7 @@ function addHasOnlyChild(es, styleHasOnlyChild) {
 }
 
 function hasOnlyChildOne(e) {
-	for (const c of Array.from(e.parentElement.childNodes)) {
+	for (const c of [...e.parentElement.childNodes]) {
 		if (
 			(c.nodeType === 1 /*ELEMENT_NODE*/ && c !== e) ||
 			(c.nodeType === 3 /*TEXT_NODE*/ && c.textContent.trim() !== '')
