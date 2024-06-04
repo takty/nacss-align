@@ -3,7 +3,7 @@
  * Float
  *
  * @author Takuto Yanagida
- * @version 2021-12-26
+ * @version 2024-06-04
  *
  */
 
@@ -26,9 +26,9 @@ function apply(tars = {}, opts = {}) {
 	}, 0);  // Delay
 }
 
-function assignEventListener(as, cls, opts) {
+async function assignEventListener(as, cls, opts) {
 	const aws = as.map(e => [e, 0]);
-	onScroll(() => storeWidth(aws, cls, opts), true);  // For lazy loading
+	storeWidth(aws, cls, opts);
 	onResize(() => update(aws, cls, opts), true);
 }
 
@@ -36,13 +36,26 @@ function assignEventListener(as, cls, opts) {
 // -------------------------------------------------------------------------
 
 
-function storeWidth(aws, style, opts) {
-	for (const aw of aws) {
-		const [a, w] = aw;
-		if (10 < w) continue;
-		switchFloatOne(a, false, style, opts);
-		aw[1] = a.getBoundingClientRect().width;
-		switchFloatOne(a, true, style, opts);
+async function storeWidth(aws, cls, opts) {
+	while (true) {
+		let doUpdate = false;
+		let count    = 0;
+		for (const aw of aws) {
+			const [a, w] = aw;
+			if (10 < w) {
+				count += 1;
+				continue;
+			}
+			aw[1] = a.getBoundingClientRect().width;
+			doUpdate = true;
+		}
+		if (doUpdate) {
+			update(aws, cls, opts)
+		}
+		if (count === aws.length) {
+			break;
+		}
+		await new Promise(r => setTimeout(r, 100));
 	}
 }
 
